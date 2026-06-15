@@ -1,0 +1,6 @@
+node_modules/
+serve.js
+package.json
+package-lock.json
+استعلام_قیمت.xlsx
+.netlifyignore

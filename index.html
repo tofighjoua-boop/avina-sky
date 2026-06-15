@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="شرکت مشاوره و خدمات بار هوایی آوینا - ارائه خدمات حرفه‌ای حمل بار هوایی، بسته‌بندی و ترخیص کالا">
+  <title>آوینا | مشاوره و خدمات بار هوایی</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- SEO: Organization + Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://avinasky.ir/#organization",
+        "name": "شرکت مشاوره و خدمات بار هوایی آوینا",
+        "alternateName": "آوینا اسکای",
+        "url": "https://avinasky.ir",
+        "logo": "https://avinasky.ir/avinasky%20logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+98-21-00000000",
+          "contactType": "customer service",
+          "availableLanguage": "Persian"
+        },
+        "description": "ارائه خدمات حرفه‌ای حمل بار هوایی، بسته‌بندی و ترخیص کالا در سراسر جهان"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://avinasky.ir/#website",
+        "url": "https://avinasky.ir",
+        "name": "آوینا | مشاوره و خدمات بار هوایی",
+        "publisher": { "@id": "https://avinasky.ir/#organization" },
+        "inLanguage": "fa-IR"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="avinasky logo.png" alt="آوینا اسکای" height="48">
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">خدمات</a>
+        <a href="#guide">راهنمای فریت</a>
+        <a href="#faq">سوالات متداول</a>
+        <a href="#quote">استعلام قیمت</a>
+        <a href="#testimonials">رضایت مشتریان</a>
+        <a href="blog.html">مقالات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="باز کردن منو">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <!-- height: 300vh — scroll space to play through full video -->
+  <section id="hero">
+    <div class="hero-sticky">
+      <div class="hero-video-wrap">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-heading">
+        <h1 class="hero-title">
+          مشاوره و خدمات<br>
+          بار هوایی <span class="text-gold">آوینا</span>
+        </h1>
+        <p class="hero-tagline">بسته‌بندی و حمل انواع بار تجاری و مسافری</p>
+      </div>
+      <div class="hero-content">
+        <a href="#services" class="btn-primary">مشاهده خدمات</a>
+      </div>
+      <a href="#services" class="scroll-down" aria-label="اسکرول به بخش خدمات">
+        <span class="scroll-arrow"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">خدمات ما</span>
+        <h2 class="section-title">چه کاری برای شما انجام می‌دهیم؟</h2>
+        <p class="section-sub">با بیش از ۱۵ سال تجربه، تمامی نیازهای لجستیکی شما را برآورده می‌کنیم</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-plane-departure"></i>
+          </div>
+          <h3>حمل بار هوایی بین‌الملل</h3>
+          <p>ارسال و دریافت محموله در سراسر جهان با سرعت و اطمینان کامل از طریق بهترین ایرلاین‌های بین‌المللی</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <h3>بسته‌بندی تخصصی</h3>
+          <p>بسته‌بندی ایمن و استاندارد کالا با استفاده از مواد اولیه باکیفیت برای حمل‌ونقل هوایی بین‌المللی</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <h3>ترخیص کالا از گمرک</h3>
+          <p>انجام کلیه مراحل اداری و گمرکی با کمترین زمان ممکن و رعایت کامل قوانین و مقررات بین‌المللی</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>مشاوره تخصصی بار هوایی</h3>
+          <p>راهنمایی کارشناسانه برای انتخاب بهترین روش ارسال و کاهش هزینه‌های حمل‌ونقل</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>حمل بار فوری (Express)</h3>
+          <p>ارسال سریع محموله‌های فوری در کوتاه‌ترین زمان با همکاری شرکت‌های پیشرو دنیا</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-location-dot"></i>
+          </div>
+          <h3>ردیابی آنلاین محموله</h3>
+          <p>پیگیری لحظه‌ای وضعیت محموله شما در هر نقطه از جهان از طریق سیستم ردیابی پیشرفته</p>
+        </div>
+
+      </div>
+      <div class="section-cta">
+        <a href="services.html" class="btn-primary">مشاهده همه خدمات <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">فرایند کار</span>
+        <h2 class="section-title">چهار قدم تا تحویل بار</h2>
+        <p class="section-sub">ساده، شفاف و بدون دغدغه؛ ما همه‌ی مراحل را برای شما مدیریت می‌کنیم.</p>
+      </div>
+      <div class="process-grid">
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <i class="fas fa-phone"></i>
+            <span class="step-badge">۱</span>
+          </div>
+          <h3>تماس و مشاوره</h3>
+          <p>نیاز خود را با کارشناسان ما در میان بگذارید و مشاوره رایگان بگیرید.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <i class="fas fa-clipboard-list"></i>
+            <span class="step-badge">۲</span>
+          </div>
+          <h3>استعلام و برنامه‌ریزی</h3>
+          <p>بهترین مسیر، خط هوایی و نرخ را برای محموله شما مشخص می‌کنیم.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <i class="fas fa-plane"></i>
+            <span class="step-badge">۳</span>
+          </div>
+          <h3>حمل و پیگیری</h3>
+          <p>بار شما را با هماهنگی کامل ارسال و لحظه‌به‌لحظه پیگیری می‌کنیم.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <i class="fas fa-box-open"></i>
+            <span class="step-badge">۴</span>
+          </div>
+          <h3>ترخیص و تحویل</h3>
+          <p>محموله را ترخیص و در محل مقصد به شما تحویل می‌دهیم.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap"><i class="fas fa-award"></i></div>
+          <div class="stat-val">
+            <span class="stat-number" data-target="15">۰</span>
+            <span class="stat-plus">+</span>
+          </div>
+          <span class="stat-label">سال تجربه</span>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap"><i class="fas fa-users"></i></div>
+          <div class="stat-val">
+            <span class="stat-number" data-target="500">۰</span>
+            <span class="stat-plus">+</span>
+          </div>
+          <span class="stat-label">مشتری راضی</span>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap"><i class="fas fa-globe"></i></div>
+          <div class="stat-val">
+            <span class="stat-number" data-target="30">۰</span>
+            <span class="stat-plus">+</span>
+          </div>
+          <span class="stat-label">کشور مقصد</span>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap"><i class="fas fa-headset"></i></div>
+          <div class="stat-val">
+            <span class="stat-number" data-target="24">۰</span>
+            <span class="stat-suffix">/۷</span>
+          </div>
+          <span class="stat-label">پشتیبانی</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section id="why-us">
+    <div class="container">
+      <div class="why-wrap">
+
+        <!-- Cards Grid — right side in RTL -->
+        <div class="why-cards">
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fas fa-tag"></i></div>
+            <h4>نرخ شفاف و رقابتی</h4>
+            <p>هزینه‌ها را پیش از حمل دقیق اعلام می‌کنیم؛ بدون هزینه پنهان.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fas fa-headset"></i></div>
+            <h4>پشتیبانی واقعی</h4>
+            <p>کارشناس اختصاصی شما در تمام مراحل پاسخگوست.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fas fa-globe"></i></div>
+            <h4>شبکه گسترده</h4>
+            <p>همکاری با خطوط هوایی و فورواردرهای معتبر در سراسر دنیا.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fas fa-award"></i></div>
+            <h4>تخصص و تجربه</h4>
+            <p>بیش از یک دهه تجربه در لجستیک و تجارت بین‌الملل.</p>
+          </div>
+        </div>
+
+        <!-- Content — left side in RTL -->
+        <div class="why-content">
+          <span class="section-badge">چرا ما</span>
+          <h2 class="section-title">چرا کسب‌وکارها به ما<br>اعتماد می‌کنند؟</h2>
+          <p class="why-desc">ما فقط بار را جابه‌جا نمی‌کنیم؛ شریک لجستیکی شما هستیم تا با خیال راحت روی رشد کسب‌وکارتان تمرکز کنید.</p>
+          <ul class="why-checklist">
+            <li><i class="fas fa-check-circle"></i> مدیریت یکپارچه کل زنجیره حمل</li>
+            <li><i class="fas fa-check-circle"></i> اسناد و تشریفات گمرکی بدون خطا</li>
+            <li><i class="fas fa-check-circle"></i> گزارش‌دهی شفاف در هر مرحله</li>
+            <li><i class="fas fa-check-circle"></i> راهکار اختصاصی برای هر صنعت</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">رضایت مشتریان</span>
+        <h2 class="section-title">مشتریان درباره ما چه می‌گویند؟</h2>
+        <p class="section-sub">تجربه واقعی کسب‌وکارهایی که بار خود را به آوینا اسکای سپرده‌اند</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">«با آوینا اسکای برای اولین بار همکاری کردیم و نتیجه فوق‌العاده بود. محموله دارویی ما در کمترین زمان و بدون کوچک‌ترین مشکل گمرکی به مقصد رسید.»</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">م.ر</div>
+            <div class="testimonial-info">
+              <strong>محمد رضایی</strong>
+              <span>مدیرعامل شرکت دارویی سپهر</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">«قیمت‌گذاری شفاف و بدون هزینه پنهان آوینا نسبت به سایر فورواردرها ممتاز است. تیم پشتیبانی همیشه در دسترس است و در هر مرحله اطلاع‌رسانی می‌کنند.»</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">س.ک</div>
+            <div class="testimonial-info">
+              <strong>سارا کریمی</strong>
+              <span>مدیر لجستیک گروه صنعتی آریا</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">«بسته‌بندی تخصصی آوینا برای قطعات الکترونیکی ما بی‌نظیر بود. در طول سه سال همکاری، حتی یک مورد خسارت نداشتیم. واقعاً حرفه‌ای هستند.»</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ع.م</div>
+            <div class="testimonial-info">
+              <strong>علی محمدی</strong>
+              <span>مدیر واردات شرکت فناوری رایان</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="section-cta">
+        <a href="testimonials.html" class="btn-outline">مشاهده همه نظرات <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-wrap">
+
+        <div class="about-visual">
+          <div class="about-logo-frame">
+            <img src="avinasky logo.png" alt="شرکت مشاوره و خدمات بار هوایی آوینا">
+          </div>
+          <div class="about-badge-float">
+            <i class="fas fa-plane"></i>
+            <span>بیش از ۱۵ سال تجربه</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-badge">درباره ما</span>
+          <h2 class="section-title">آوینا؛ شریک مطمئن شما<br>در آسمان‌های جهان</h2>
+          <p>شرکت مشاوره و خدمات بار هوایی آوینا با بیش از ۱۵ سال تجربه در صنعت حمل‌ونقل هوایی، با تکیه بر دانش تخصصی و تیمی از متخصصین مجرب، آماده ارائه بهترین خدمات لجستیکی به شما می‌باشد.</p>
+          <p>ما با هدف ایجاد تجربه‌ای امن، سریع و مقرون‌به‌صرفه در حمل بار هوایی، همواره در کنار مشتریان خود بوده‌ایم و با رعایت استانداردهای بین‌المللی، اعتماد صدها شرکت و کسب‌وکار را جلب نموده‌ایم.</p>
+
+          <ul class="about-features">
+            <li><i class="fas fa-check-circle"></i> تیم متخصص و با تجربه</li>
+            <li><i class="fas fa-check-circle"></i> پوشش بیش از ۳۰ کشور جهان</li>
+            <li><i class="fas fa-check-circle"></i> قیمت‌گذاری شفاف و رقابتی</li>
+            <li><i class="fas fa-check-circle"></i> پشتیبانی ۲۴ ساعته، ۷ روز هفته</li>
+          </ul>
+
+          <a href="#contact" class="btn-primary">تماس با ما</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG ===== -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">مقالات</span>
+        <h2 class="section-title">آخرین مقالات تخصصی</h2>
+        <p class="section-sub">راهنماها و نکات کاربردی در حوزه حمل بار هوایی و لجستیک بین‌الملل</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <div class="blog-thumb blog-thumb--1">
+            <span class="blog-cat">حمل بار</span>
+            <i class="fas fa-plane-departure"></i>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <time datetime="2024-10-15"><i class="far fa-calendar"></i> ۱۵ دی ۱۴۰۳</time>
+              <span><i class="far fa-clock"></i> ۵ دقیقه</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="blog-air-freight.html">راهنمای جامع حمل بار هوایی بین‌الملل</a>
+            </h3>
+            <p class="blog-excerpt">آنچه باید درباره فرآیند ارسال محموله از طریق هوا بدانید؛ از مراحل اولیه تا تحویل نهایی بار به مقصد.</p>
+            <a href="blog-air-freight.html" class="blog-link">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-thumb blog-thumb--2">
+            <span class="blog-cat">گمرک</span>
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <time datetime="2024-10-05"><i class="far fa-calendar"></i> ۵ دی ۱۴۰۳</time>
+              <span><i class="far fa-clock"></i> ۷ دقیقه</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="blog-customs.html">مدارک لازم برای واردات و صادرات هوایی</a>
+            </h3>
+            <p class="blog-excerpt">فهرست کامل اسناد و مدارک مورد نیاز گمرک برای ترخیص کالا از طریق حمل هوایی و نکات کلیدی هر مرحله.</p>
+            <a href="blog-customs.html" class="blog-link">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-thumb blog-thumb--3">
+            <span class="blog-cat">بسته‌بندی</span>
+            <i class="fas fa-box-open"></i>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <time datetime="2024-09-20"><i class="far fa-calendar"></i> ۲۰ آذر ۱۴۰۳</time>
+              <span><i class="far fa-clock"></i> ۴ دقیقه</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="blog-packaging.html">استانداردهای بسته‌بندی برای حمل هوایی</a>
+            </h3>
+            <p class="blog-excerpt">برای کاهش خسارت در حین حمل هوایی، آشنایی با استانداردهای بسته‌بندی IATA ضروری است. این مقاله راهنمای کاملی ارائه می‌دهد.</p>
+            <a href="blog-packaging.html" class="blog-link">ادامه مطلب <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </article>
+
+      </div>
+      <div class="section-cta">
+        <a href="blog.html" class="btn-primary">مشاهده همه مقالات <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUIDE ===== -->
+  <section id="guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">راهنمای فریت بار</span>
+        <h2 class="section-title">هر آنچه باید درباره فریت هوایی بدانید</h2>
+        <p class="section-sub">راهنمای جامع برای صادرکنندگان و واردکنندگان محترم</p>
+      </div>
+      <div class="guide-grid">
+
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-box-open"></i></div>
+          <h3>بسته‌بندی استاندارد</h3>
+          <p>بسته‌بندی صحیح محموله هوایی طبق استانداردهای IATA از خسارت جلوگیری می‌کند. برای بار شکستنی از فوم و کارتن دوجداره، و برای مایعات از درب‌بند محکم استفاده کنید.</p>
+          <ul class="guide-tips">
+            <li>استفاده از کارتن دوجداره برای کالاهای شکستنی</li>
+            <li>درج مشخصات کامل روی هر بسته</li>
+            <li>وزن هر بسته حداکثر ۳۲ کیلوگرم</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>مدارک و اسناد گمرکی</h3>
+          <p>برای ترخیص سریع محموله، اسناد کامل و صحیح الزامی است. هرگونه نقص مدرکی موجب توقف و هزینه‌های اضافی می‌شود.</p>
+          <ul class="guide-tips">
+            <li>فاکتور تجاری (Commercial Invoice)</li>
+            <li>بارنامه هوایی (Airway Bill)</li>
+            <li>لیست بسته‌بندی (Packing List)</li>
+            <li>گواهی مبدأ در صورت نیاز</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-calculator"></i></div>
+          <h3>نحوه محاسبه کرایه</h3>
+          <p>کرایه هوایی بر اساس وزن واقعی یا وزن حجمی (هر کدام بیشتر باشد) محاسبه می‌شود. فرمول وزن حجمی برای بار هوایی متفاوت از دریایی است.</p>
+          <ul class="guide-tips">
+            <li>وزن حجمی = (طول × عرض × ارتفاع) ÷ ۶۰۰۰</li>
+            <li>مقایسه وزن واقعی با وزن حجمی</li>
+            <li>هزینه سوخت و سایر سورچارج‌ها</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>بیمه و ایمنی محموله</h3>
+          <p>بیمه محموله هوایی از خسارات ناشی از سرقت، آسیب یا تأخیر محافظت می‌کند. پوشش بیمه‌ای را قبل از ارسال بررسی کنید.</p>
+          <ul class="guide-tips">
+            <li>بیمه تمام خطر (All Risk) توصیه می‌شود</li>
+            <li>اعلام ارزش واقعی کالا الزامی است</li>
+            <li>ثبت خسارت تا ۱۴ روز پس از تحویل</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">سوالات متداول</span>
+        <h2 class="section-title">پاسخ سوالات رایج شما</h2>
+        <p class="section-sub">اگر پاسخ سوال خود را نیافتید، با کارشناسان ما تماس بگیرید</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>چه مدارکی برای ارسال بار هوایی بین‌الملل نیاز است؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>برای ارسال بار هوایی بین‌الملل به فاکتور تجاری (Commercial Invoice)، لیست بسته‌بندی (Packing List)، بارنامه هوایی (AWB) و در برخی موارد گواهی مبدأ و مجوزهای خاص صادرات/واردات نیاز دارید. تیم ما در تهیه و تکمیل تمام این مدارک به شما کمک می‌کند.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>هزینه حمل بار هوایی چگونه محاسبه می‌شود؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>کرایه هوایی بر اساس وزن واقعی یا وزن حجمی (هر کدام بیشتر باشد) محاسبه می‌شود. وزن حجمی با فرمول (طول×عرض×ارتفاع)÷۶۰۰۰ به دست می‌آید. به این رقم هزینه‌های سوخت، امنیت و خدمات گمرکی اضافه می‌شود. برای دریافت قیمت دقیق، فرم استعلام را تکمیل کنید.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>زمان تحویل بار هوایی چقدر است؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>زمان تحویل به مقصد و نوع سرویس بستگی دارد. بار Express معمولاً ۱ تا ۳ روز کاری، و بار استاندارد ۳ تا ۷ روز کاری طول می‌کشد. پس از ترخیص گمرکی در مقصد، بار تا ۲۴ ساعت تحویل داده می‌شود.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>آیا همه نوع کالایی را می‌توان از طریق هوا ارسال کرد؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>اکثر کالاها قابل ارسال هوایی هستند، اما برخی اقلام مانند مواد منفجره، مواد رادیواکتیو، باتری‌های لیتیوم حجیم و برخی مایعات محدودیت یا شرایط ویژه دارند. تیم ما پیش از ارسال، مجاز بودن کالا را بررسی و شما را راهنمایی می‌کند.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>بیمه محموله هوایی چگونه کار می‌کند؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>بیمه محموله هوایی خسارات ناشی از آسیب فیزیکی، سرقت یا تأخیر را پوشش می‌دهد. پیشنهاد می‌کنیم بیمه «تمام خطر» (All Risk) انتخاب کنید. حق بیمه معمولاً ۰.۳ تا ۰.۵ درصد ارزش کالاست. آوینا اسکای امکان تهیه بیمه‌نامه را نیز فراهم می‌کند.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>برای استعلام قیمت چه اطلاعاتی لازم است؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <p>برای دریافت قیمت دقیق نیاز داریم بدانیم: مبدأ و مقصد ارسال، وزن و ابعاد محموله، نوع کالا، تاریخ تقریبی ارسال و نیاز به خدمات جانبی مانند بسته‌بندی یا بیمه. فرم استعلام زیر را تکمیل کنید تا ظرف ۲ ساعت پاسخ دریافت کنید.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE ===== -->
+  <section id="quote">
+    <div class="container">
+      <div class="quote-wrap">
+
+        <div class="quote-info">
+          <span class="section-badge">استعلام قیمت</span>
+          <h2 class="section-title">قیمت ارسال بار خود را بدانید</h2>
+          <p class="quote-desc">فرم را تکمیل کنید تا کارشناسان ما ظرف <strong>۲ ساعت کاری</strong> با شما تماس بگیرند و بهترین نرخ را ارائه دهند.</p>
+          <ul class="quote-features">
+            <li><i class="fas fa-check-circle"></i> مشاوره و استعلام کاملاً رایگان</li>
+            <li><i class="fas fa-check-circle"></i> پاسخ‌دهی ظرف ۲ ساعت کاری</li>
+            <li><i class="fas fa-check-circle"></i> قیمت‌گذاری شفاف بدون هزینه پنهان</li>
+            <li><i class="fas fa-check-circle"></i> بهترین نرخ از معتبرترین ایرلاین‌ها</li>
+          </ul>
+        </div>
+
+        <form class="quote-form" id="quoteForm" novalidate
+              name="quote" data-netlify="true">
+          <input type="hidden" name="form-name" value="quote">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-name">نام و نام خانوادگی <span>*</span></label>
+              <input type="text" id="q-name" name="name" placeholder="مثال: علی احمدی" required>
+            </div>
+            <div class="form-group">
+              <label for="q-phone">شماره تماس <span>*</span></label>
+              <input type="tel" id="q-phone" name="phone" placeholder="09XXXXXXXXX" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-origin">مبدأ (شهر / کشور) <span>*</span></label>
+              <input type="text" id="q-origin" name="origin" placeholder="مثال: تهران، ایران" required>
+            </div>
+            <div class="form-group">
+              <label for="q-dest">مقصد (شهر / کشور) <span>*</span></label>
+              <input type="text" id="q-dest" name="destination" placeholder="مثال: فرانکفورت، آلمان" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-weight">وزن تقریبی (کیلوگرم)</label>
+              <input type="number" id="q-weight" name="weight" placeholder="مثال: ۵۰۰" min="1">
+            </div>
+            <div class="form-group">
+              <label for="q-type">نوع کالا</label>
+              <select id="q-type" name="type">
+                <option value="">انتخاب کنید...</option>
+                <option>قطعات صنعتی و ماشین‌آلات</option>
+                <option>محصولات دارویی و پزشکی</option>
+                <option>اقلام الکترونیکی</option>
+                <option>مواد غذایی و فاسدشدنی</option>
+                <option>پوشاک و نساجی</option>
+                <option>سایر کالاها</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="q-desc">توضیحات تکمیلی</label>
+            <textarea id="q-desc" name="description" rows="3" placeholder="ابعاد بسته‌بندی، نیاز به بیمه، تاریخ ارسال و هر اطلاعات دیگری..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">
+            <i class="fas fa-paper-plane"></i> ارسال درخواست استعلام
+          </button>
+          <div class="form-success" id="formSuccess" hidden>
+            <i class="fas fa-check-circle"></i> درخواست شما دریافت شد. ظرف ۲ ساعت با شما تماس می‌گیریم.
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">تماس با ما</span>
+        <h2 class="section-title">در تماس باشید</h2>
+        <p class="section-sub">برای مشاوره رایگان و استعلام قیمت با ما در ارتباط باشید</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h4>تلفن</h4>
+          <p>۰۲۱-XXXX-XXXX</p>
+          <a href="tel:+982100000000">تماس بگیرید</a>
+        </div>
+
+        <div class="contact-card contact-whatsapp">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h4>واتس‌اپ</h4>
+          <p>۰۹۱X-XXX-XXXX</p>
+          <a href="https://wa.me/989100000000" target="_blank" rel="noopener">پیام بفرستید</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h4>ایمیل</h4>
+          <p>info@avinasky.ir</p>
+          <a href="mailto:info@avinasky.ir">ایمیل بزنید</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-location-dot"></i>
+          </div>
+          <h4>آدرس</h4>
+          <p>تهران، آدرس دفتر مرکزی</p>
+          <a href="#" target="_blank" rel="noopener">مشاهده در نقشه</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <img src="avinasky logo.png" alt="آوینا اسکای" height="52">
+          <p>شریک مطمئن شما در آسمان‌های جهان</p>
+          <div class="footer-social">
+            <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="واتس‌اپ"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-col-title">خدمات</h5>
+          <nav class="footer-col-links">
+            <a href="#services">حمل بار هوایی بین‌الملل</a>
+            <a href="#services">بسته‌بندی تخصصی</a>
+            <a href="#services">ترخیص از گمرک</a>
+            <a href="#services">حمل بار فوری Express</a>
+            <a href="#quote">استعلام قیمت</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-col-title">راهنما و اطلاعات</h5>
+          <nav class="footer-col-links">
+            <a href="#guide">راهنمای فریت بار</a>
+            <a href="#faq">سوالات متداول</a>
+            <a href="#blog">مقالات تخصصی</a>
+            <a href="#process">فرایند کار</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-col-title">شرکت</h5>
+          <nav class="footer-col-links">
+            <a href="#about">درباره ما</a>
+            <a href="#testimonials">رضایت مشتریان</a>
+            <a href="#why-us">چرا آوینا؟</a>
+            <a href="#contact">تماس با ما</a>
+          </nav>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>تمامی حقوق این سایت متعلق به شرکت مشاوره و خدمات بار هوایی آوینا می‌باشد &copy; ۱۴۰۳</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
