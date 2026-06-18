@@ -512,14 +512,6 @@
     });
   });
 
-  /* =============================================
-     WHATSAPP FLOAT BUTTON — show after scroll
-     ============================================= */
-  const waFloat = document.querySelector('.whatsapp-float');
-  if (waFloat) {
-    const toggleWa = () => waFloat.classList.toggle('visible', window.scrollY > 200);
-    window.addEventListener('scroll', toggleWa, { passive: true });
-    toggleWa();
-  }
+  /* WhatsApp float — always visible, no scroll dependency */
 
 })();

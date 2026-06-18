@@ -1913,29 +1913,24 @@ ul { list-style: none; }
   position: fixed;
   bottom: 28px;
   right: 28px;
-  z-index: 998;
-  width: 58px;
-  height: 58px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
-  opacity: 0;
-  transform: scale(0.7) translateY(10px);
-  pointer-events: none;
-  transition: opacity 0.35s, transform 0.35s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
   text-decoration: none;
 }
-.whatsapp-float.visible {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-  pointer-events: auto;
-}
 .whatsapp-float:hover {
-  transform: scale(1.1) translateY(0) !important;
-  box-shadow: 0 6px 28px rgba(37,211,102,0.65);
+  transform: scale(1.12);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.7);
 }
 .whatsapp-float i {
   font-size: 2rem;
