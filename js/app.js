@@ -9,6 +9,9 @@
   /* ---- GSAP plugin registration ---- */
   gsap.registerPlugin(ScrollTrigger);
 
+  /* Mobile: skip heavy canvas animation + horizontal GSAP tweens */
+  const IS_MOBILE = window.innerWidth <= 640;
+
   /* =============================================
      0. LOGO BACKGROUND REMOVAL
      Scans each logo pixel; removes near-white /
@@ -55,18 +58,21 @@
   document.querySelectorAll('.nav-logo img').forEach((img) => img.classList.add('logo-ready'));
 
   /* =============================================
-     1. LENIS SMOOTH SCROLL
+     1. LENIS SMOOTH SCROLL — desktop only
+     Native scroll on mobile is smoother
      ============================================= */
-  const lenis = new Lenis({
-    duration: 1.25,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true,
-    touchMultiplier: 2,
-  });
+  if (!IS_MOBILE) {
+    const lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      touchMultiplier: 2,
+    });
 
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
 
   /* =============================================
      2. NAVBAR: transparent → solid on scroll
@@ -145,8 +151,8 @@
     ctx.drawImage(img, dx, dy, dw, dh);
   }
 
-  /* Preload all frames; draw frame 0 as soon as it arrives */
-  if (canvas) {
+  /* Preload all frames and wire scroll animation — desktop only */
+  if (canvas && !IS_MOBILE) {
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
       img.src = `frames/frame_${String(i + 1).padStart(4, '0')}.webp`;
@@ -156,30 +162,30 @@
       }
     }
     window.addEventListener('resize', resizeCanvas);
+
+    /* Scroll → frame index (scrub:true = zero lag) */
+    ScrollTrigger.create({
+      trigger: '#hero',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true,
+      onUpdate: (self) => {
+        const idx = Math.min(
+          Math.floor(self.progress * FRAME_COUNT),
+          FRAME_COUNT - 1
+        );
+        if (idx !== currentFrame) {
+          currentFrame = idx;
+          if (rAF) cancelAnimationFrame(rAF);
+          rAF = requestAnimationFrame(() => drawFrame(currentFrame));
+        }
+      },
+    });
   }
 
-  /* Scroll → frame index (scrub:true = zero lag) */
-  ScrollTrigger.create({
-    trigger: '#hero',
-    start: 'top top',
-    end: 'bottom bottom',
-    scrub: true,
-    onUpdate: (self) => {
-      const idx = Math.min(
-        Math.floor(self.progress * FRAME_COUNT),
-        FRAME_COUNT - 1
-      );
-      if (idx !== currentFrame) {
-        currentFrame = idx;
-        if (rAF) cancelAnimationFrame(rAF);
-        rAF = requestAnimationFrame(() => drawFrame(currentFrame));
-      }
-    },
-  });
-
-  /* Hero text and button fade out in first third of scroll */
+  /* Hero text and button fade out — desktop only */
   const heroCta = document.querySelector('.hero-content');
-  if (heroContent) {
+  if (heroContent && !IS_MOBILE) {
     gsap.to(heroContent, {
       y: '-50px',
       opacity: 0,
@@ -192,7 +198,7 @@
       },
     });
   }
-  if (heroCta) {
+  if (heroCta && !IS_MOBILE) {
     gsap.to(heroCta, {
       opacity: 0,
       ease: 'none',
@@ -292,7 +298,7 @@
 
   if (whyContent) {
     gsap.from(whyContent, {
-      x: -50,
+      x: IS_MOBILE ? 0 : -50,
       opacity: 0,
       duration: 0.85,
       ease: 'power3.out',
@@ -392,7 +398,7 @@
 
     aboutTL
       .from(aboutVisual, {
-        x: 60,
+        x: IS_MOBILE ? 0 : 60,
         opacity: 0,
         duration: 0.9,
         ease: 'power3.out',
@@ -400,7 +406,7 @@
       .from(
         aboutContent,
         {
-          x: -60,
+          x: IS_MOBILE ? 0 : -60,
           opacity: 0,
           duration: 0.9,
           ease: 'power3.out',
@@ -429,13 +435,13 @@
     scrollTrigger: { trigger: '.faq-list', start: 'top 82%', toggleActions: 'play none none reverse' },
   });
 
-  /* QUOTE — slide in */
+  /* QUOTE — slide in (horizontal only on desktop) */
   gsap.from('.quote-info', {
-    x: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
+    x: IS_MOBILE ? 0 : 50, opacity: 0, duration: 0.8, ease: 'power3.out',
     scrollTrigger: { trigger: '.quote-wrap', start: 'top 80%', toggleActions: 'play none none reverse' },
   });
   gsap.from('.quote-form', {
-    x: -50, opacity: 0, duration: 0.8, ease: 'power3.out',
+    x: IS_MOBILE ? 0 : -50, opacity: 0, duration: 0.8, ease: 'power3.out',
     scrollTrigger: { trigger: '.quote-wrap', start: 'top 80%', toggleActions: 'play none none reverse' },
   });
 

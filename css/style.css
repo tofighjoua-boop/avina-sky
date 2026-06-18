@@ -75,6 +75,7 @@ body {
   line-height: 1.7;
   color: var(--text);
   background: var(--white);
+  overflow-x: hidden;
   direction: rtl;
   overflow-x: hidden;
 }
@@ -1614,9 +1615,26 @@ ul { list-style: none; }
 
   .nav-links a::after { display: none; }
 
-  /* Hero mobile — text centered, button at center-bottom */
-  #hero { min-height: 100svh; }
+  /* Hero mobile — static 100svh, no scroll animation */
+  #hero {
+    height: 100svh !important;
+    min-height: 100svh;
+  }
 
+  .hero-sticky {
+    position: relative !important;
+    top: auto !important;
+    height: 100svh !important;
+  }
+
+  /* Hide canvas on mobile; fallback gradient background */
+  #heroCanvas { display: none !important; }
+
+  .hero-video-wrap {
+    background: linear-gradient(160deg, #071A30 0%, #0F3060 55%, #1a4a7a 100%) !important;
+  }
+
+  /* Hero text — centered portrait layout */
   .hero-heading {
     left: 0;
     right: 0;
@@ -1624,6 +1642,8 @@ ul { list-style: none; }
     max-width: 100%;
     padding: 0 22px;
     text-align: center;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .hero-title {
@@ -1641,6 +1661,29 @@ ul { list-style: none; }
     right: 0;
     left: 0;
     text-align: center;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Prevent GSAP horizontal transforms from causing overflow */
+  .about-visual,
+  .about-content,
+  .quote-info,
+  .quote-form,
+  .why-content,
+  .service-card,
+  .process-step,
+  .why-card,
+  .testimonial-card,
+  .blog-card,
+  .guide-card,
+  .faq-item,
+  .stat-item,
+  .contact-card,
+  .section-header {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
   }
 
   /* Sections spacing */
@@ -1689,6 +1732,66 @@ ul { list-style: none; }
   }
 
   .footer-links { gap: 20px; }
+}
+
+/* ==============================================
+   LANDSCAPE MOBILE — portrait→landscape adaptation
+   Targets phones/small tablets rotated sideways
+   (narrow height: max-height ≤ 500px)
+   ============================================== */
+@media (orientation: landscape) and (max-height: 500px) {
+
+  #hero {
+    height: 100dvh !important;
+    min-height: 100dvh;
+  }
+
+  .hero-sticky {
+    height: 100dvh !important;
+  }
+
+  .hero-heading {
+    top: 16%;
+    padding: 0 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(0.95rem, 3.5vw, 1.3rem) !important;
+    margin-bottom: 5px;
+  }
+
+  .hero-tagline {
+    font-size: 0.68rem !important;
+    line-height: 1.4;
+  }
+
+  .hero-content {
+    bottom: 7%;
+  }
+
+  /* Compact section padding */
+  #services, #process, #why, #about,
+  #testimonials, #guide, #faq,
+  #quote, #contact {
+    padding: 40px 0 !important;
+  }
+
+  #stats { padding: 36px 0 !important; }
+
+  .section-header { margin-bottom: 24px !important; }
+
+  .section-title { font-size: 1.4rem !important; }
+
+  .section-sub { font-size: 0.82rem !important; }
+
+  /* Landscape 2-column grids for compactness */
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .guide-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .process-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .contact-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
 /* ==============================================
