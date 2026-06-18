@@ -2077,6 +2077,50 @@ ul { list-style: none; }
 }
 
 /* ==============================================
+   BALE FLOAT BUTTON (bottom-left)
+   ============================================== */
+.bale-float {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  background: #1B48C4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(27, 72, 196, 0.5);
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+.bale-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 28px rgba(27, 72, 196, 0.72);
+}
+.bale-float::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 3px solid rgba(27, 72, 196, 0.5);
+  opacity: 0;
+  animation: bale-pulse 2.2s ease-out infinite;
+}
+.bale-float svg {
+  display: block;
+  flex-shrink: 0;
+}
+@keyframes bale-pulse {
+  0%   { transform: scale(1);    opacity: 0.8; }
+  100% { transform: scale(1.65); opacity: 0;   }
+}
+
+/* ==============================================
    REDUCED MOTION
    ============================================== */
 @media (prefers-reduced-motion: reduce) {
