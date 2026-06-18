@@ -1614,12 +1614,34 @@ ul { list-style: none; }
 
   .nav-links a::after { display: none; }
 
-  /* Hero mobile */
+  /* Hero mobile — text centered, button at center-bottom */
   #hero { min-height: 100svh; }
 
-  .hero-title { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .hero-heading {
+    left: 0;
+    right: 0;
+    top: 30%;
+    max-width: 100%;
+    padding: 0 22px;
+    text-align: center;
+  }
 
-  .hero-tagline { font-size: 0.92rem; }
+  .hero-title {
+    font-size: clamp(1.25rem, 5.5vw, 1.6rem);
+    margin-bottom: 10px;
+  }
+
+  .hero-tagline {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .hero-content {
+    bottom: 9%;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
 
   /* Sections spacing */
   #services,
