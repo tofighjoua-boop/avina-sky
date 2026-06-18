@@ -286,6 +286,8 @@
         quoteForm.reset();
         btn.style.display = 'none';
         formSuccess.hidden = false;
+        /* Navigate to Bale PV after 2.5s so user can follow up instantly */
+        setTimeout(() => { window.open('https://ble.ir/AvinaSky', '_blank'); }, 2500);
       } catch {
         btn.disabled = false;
         btn.innerHTML = 'ارسال استعلام';
