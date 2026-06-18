@@ -212,6 +212,25 @@
   }
 
   /* =============================================
+     VIDEO BACKGROUND PARALLAX
+     Works on all devices — mobile shows video,
+     desktop shows video under canvas frames
+     ============================================= */
+  const heroBgVideo = document.querySelector('.hero-video-bg');
+  if (heroBgVideo) {
+    gsap.to(heroBgVideo, {
+      yPercent: IS_MOBILE ? -12 : -20,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: IS_MOBILE ? 'bottom top' : 'bottom bottom',
+        scrub: true,
+      },
+    });
+  }
+
+  /* =============================================
      FAQ ACCORDION
      ============================================= */
   document.querySelectorAll('.faq-q').forEach((btn) => {
