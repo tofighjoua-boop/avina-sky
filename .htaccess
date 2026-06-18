@@ -1,0 +1,31 @@
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Correct MIME types
+AddType video/mp4 .mp4
+AddType image/png .png
+AddType image/svg+xml .svg
+AddType text/css .css
+AddType application/javascript .js
+AddType font/woff2 .woff2
+
+# Enable CORS for fonts
+<FilesMatch "\.(woff2?|ttf|otf|eot)$">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>
