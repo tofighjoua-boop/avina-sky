@@ -1907,6 +1907,56 @@ ul { list-style: none; }
 }
 
 /* ==============================================
+   WHATSAPP FLOAT BUTTON
+   ============================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 998;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  opacity: 0;
+  transform: scale(0.7) translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.35s, transform 0.35s, box-shadow 0.3s;
+  text-decoration: none;
+}
+.whatsapp-float.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(0) !important;
+  box-shadow: 0 6px 28px rgba(37,211,102,0.65);
+}
+.whatsapp-float i {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1;
+}
+.whatsapp-float::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 3px solid rgba(37,211,102,0.55);
+  opacity: 0;
+  animation: wa-pulse 2.2s ease-out infinite;
+}
+@keyframes wa-pulse {
+  0%   { transform: scale(1);    opacity: 0.8; }
+  100% { transform: scale(1.65); opacity: 0;   }
+}
+
+/* ==============================================
    REDUCED MOTION
    ============================================== */
 @media (prefers-reduced-motion: reduce) {
